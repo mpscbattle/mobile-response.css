@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 10px;
+}
+
+.quiz-box, .report-card, .analysis-card {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.startBtn {
+  background-color: #cc5200;
+  color: white;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+font-size: 14px;     
+margin-bottom: 15px;
+      margin-top: 15px;
+}
+
+.timer {
+  background-color: #00b386;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+font-size: 14px;
+      margin-top: 15px;
+}
+
+.question-number-circle {
+  background: #000080;
+  color: white;
+  font-weight: bold;
+  padding: 3px 7px;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 40px;
+}
+
+.question {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 15px 0 10px;
+}
+
+.options .option {
+  font-size: 15px;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option.selected {
+  background-color: #80bdff !important;
+}
+
+.option.correct {
+  background-color: #009999;
+  color: white;
+}
+
+.option.wrong {
+  background-color: #990000;
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 8px 16px;
+font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #000080;
+  color: white;
+font-weight: bold;
+  display: block;
+  margin: 20px auto;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-black {
+  background-color: black;
+  color: white;
+  display: block;
+  margin: 15px auto;
+font-weight: bold;
+padding: 4px 9px;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.report-item {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.result-message {
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #0056b3;
+  margin-top: 10px;
+}
+
+.analysis-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.analysis-box .option {
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.feedback {
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 6px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.correct-feedback {
+  background-color: #009999;
+  color: white;
+}
+
+.wrong-feedback {
+  background-color: #990000;
+  color: white;
+}
+
+.not-attempted-feedback {
+  background-color: #66c2ff;
+  color: white;
+}
