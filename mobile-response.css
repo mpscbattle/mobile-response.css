@@ -8,15 +8,15 @@ body {
 font-family: 'Poppins', sans-serif;
   background-color: #f0f0f0;
   margin: 0;
-  padding: 10px;
+  padding: 5px;
 }
 
 .quiz-box, .report-card, .analysis-card {
   max-width: 600px;
   margin: 20px auto;
   background: #ffffff;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 5px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -25,7 +25,6 @@ font-family: 'Poppins', sans-serif;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 10px;
 }
 
 .startBtn {
@@ -38,39 +37,46 @@ font-family: 'Poppins', sans-serif;
 font-size: 14px;     
 margin-bottom: 15px;
       margin-top: 15px;
+  margin: 0 auto;
 }
 
 .timer {
   background-color: #00b386;
   color: white;
-  padding: 6px 12px;
+  padding: 3px 7px;
   border-radius: 5px;
   font-weight: bold;
 font-size: 14px;
       margin-top: 15px;
+  margin-bottom: 15px;
+  float: right; 
 }
 
 .question-number-circle {
-  background: #000080;
+  background: #00b386;
   color: white;
   font-weight: bold;
   padding: 3px 7px;
   border-radius: 5px;
+  font-size: 14px;
   text-align: center;
   min-width: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  float: left;
 }
 
 .question {
   font-size: 17px;
   font-weight: bold;
-  margin: 15px 0 10px;
+  margin: 10px 0;
 }
 
 .options .option {
   font-size: 15px;
-  padding: 8px;
-  margin: 6px 0;
-  border: 1px solid #ccc;
+  padding: 6px;
+  margin: 4px 0;
+  border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
   cursor: pointer;
@@ -94,11 +100,14 @@ font-size: 14px;
 .navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+      gap: 10px;
 }
 
+
 .btn {
-  padding: 8px 16px;
+  padding: 8px 14px;
 font-size: 15px;
   border: none;
   border-radius: 5px;
@@ -111,21 +120,26 @@ font-size: 15px;
   color: white;
 font-weight: bold;
   display: block;
-  margin: 20px auto;
+  margin: 15px auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 15px;
 }
 
 .btn-secondary {
   background-color: #6c757d;
   color: white;
+  font-size: 15px;
 }
 
 .btn-black {
   background-color: black;
   color: white;
   display: block;
-  margin: 15px auto;
+  margin: 10px auto;
 font-weight: bold;
 padding: 4px 9px;
+  font-size: 15px;
 }
 
 .report-grid {
@@ -145,7 +159,7 @@ padding: 4px 9px;
 
 .result-message {
   text-align: center;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   color: #0056b3;
   margin-top: 10px;
@@ -154,24 +168,29 @@ padding: 4px 9px;
 .analysis-box {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 5px;
   margin: 20px 0;
-  border-radius: 5px;
+  margin-bottom: 30px;
+      margin-top: 30px;
+      border-radius: 5px;
+      font-size: 15px;
 }
 
 .analysis-box .option {
-  margin: 5px 0;
+  margin: 2px 0;
   border: 1px solid #ddd;
-  padding: 6px;
+  padding: 3px;
   border-radius: 5px;
+  font-size: 15px;
 }
 
 .feedback {
   font-weight: bold;
   margin-top: 10px;
-  padding: 6px;
+  padding: 8px;
   border-radius: 5px;
   text-align: center;
+  font-size: 16px;
 }
 
 .correct-feedback {
@@ -188,3 +207,13 @@ padding: 4px 9px;
   background-color: #66c2ff;
   color: white;
 }
+@media screen and (max-width: 600px) {
+      .quiz-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navigation {
+        flex-direction: column;
+        align-items: stretch;
+      }
