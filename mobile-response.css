@@ -1,180 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-* { 
-font-family: 'Poppins', sans-serif !important; 
-}
-body { 
-
-font-family: 'Poppins', sans-serif;
-background-color: #f0f0f0; 
-margin: 0; 
-padding: 5px; 
-}
+* { font-family: 'Poppins', sans-serif !important; }
+body { background-color: #f0f0f0; margin: 0; padding: 5px; }
 .quiz-box, .report-card, .analysis-card {
-max-width: 100%; 
-margin: 10px auto; 
-background: #fff; 
-padding: 8px;
-border-radius: 5px; 
-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+  max-width: 100%; margin: 10px auto; background: #fff; padding: 8px;
+  border-radius: 5px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
 }
 .quiz-topbar {
- display: flex; 
-justify-content: space-between;
-align-items: center;
-background: #fff; 
-padding: 6px 8px; 
-border-radius: 5px;
-margin: 20px auto 10px auto;
-flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  background: #fff; padding: 6px 8px; border-radius: 5px;
+  margin: 20px auto 10px auto; flex-wrap: wrap;
+  gap: 10px; /* Add a default gap between items */
 }
 .question-number, .timer, .startBtn {
-  
-font-size: 14px; 
-font-weight: bold; 
-padding: 6px 10px; 
-border-radius: 5px;
+  font-size: 14px; font-weight: bold; padding: 4px 7px; border-radius: 5px;
 }
+.question-number {
+    background-color: #000099;
+    color: white;
+}
+.timer { background-color: #00b386; color: white; }
+.startBtn { background-color: #cc5200; color: white; cursor: pointer; }
 
-.question-number { 
-background-color: #009999; 
-color: white; 
+/* Question text bold and space between question and options */
+.question {
+    font-size: 17px;
+    font-weight: bold; /* Make question bold */
+    margin: 10px 0;
 }
-
-.timer { 
-background-color: #009999; 
-color: white; 
-}
-.startBtn { 
-background-color: #ff6600; 
-color: white; 
-cursor: pointer; 
-}
-
-.question { 
-font-size: 17px; 
-font-weight: bold; 
-margin: 10px 0; 
+.options {
+    margin-top: 15px; /* Increase space between question and options */
 }
 
 .options .option {
-font-size: 15px; 
-padding: 6px; 
-margin: 4px 0; 
-border: 1px solid #ddd;
-border-radius: 5px;
-background-color: #f9f9f9; 
-cursor: pointer;
-transition: background 0.3s ease;
+  font-size: 15px; padding: 6px; margin: 4px 0; border: 1px solid #ddd;
+  border-radius: 5px; background-color: #f9f9f9; cursor: pointer;
+  transition: background 0.3s ease;
 }
-.option.selected { 
-background-color: #80bdff !important; }
-
+.option.selected { background-color: #80bdff !important; }
 .option.correct { background-color: #009999; color: white; }
-
 .option.wrong { background-color: #990000; color: white; }
-
 .navigation {
-display: flex; 
-justify-content: space-between;
-margin-top: 15px;
-flex-wrap: wrap; 
-gap: 10px;
+  display: flex; justify-content: space-between; margin-top: 15px;
+  flex-wrap: wrap; gap: 10px;
 }
-
 .btn {
-  padding: 8px 12px; 
-font-size: 15px; 
-border-radius: 5px;
-  border: none; 
-cursor: pointer; 
-font-weight: bold;
+  padding: 10px 16px; font-size: 15px; border-radius: 5px;
+  border: none; cursor: pointer; font-weight: bold;
 }
-.btn-primary { 
-background-color: #000080; 
-color: white; 
-margin: 15px auto; 
-display: block; 
-}
-
-.btn-secondary { 
-background-color: #6c757d; 
-color: white;
- }
-.btn-black { 
-background-color: black; 
-color: white; 
-display: block; 
-margin: 10px auto; }
-.report-grid 
-{
-  display: grid; grid-template-columns: 1fr 1fr; 
-gap: 10px; 
-margin-top: 10px;
+.btn-primary { background-color: #000080; color: white; margin: 15px auto; pading: 4px 8px; display: block; }
+.btn-secondary { background-color: #6c757d; color: white; }
+.btn-black { background-color: black; color: white; display: block; pading: 4px 8px;  margin: 10px auto; }
+.report-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;
 }
 .report-item {
-  background-color: #f2f2f2;
-border: 1px solid #ccc;
-  padding: 10px; 
-text-align: center; 
-font-size: 14px;
-border-radius: 5px;
+  background-color: #f2f2f2; border: 1px solid #ccc;
+  padding: 10px; text-align: center; font-size: 14px; border-radius: 5px;
 }
-
 .result-message {
-  text-align: center;
- font-size: 16px;
- font-weight: bold;
- color: #0056b3; 
-margin-top: 10px;
+  text-align: center; font-size: 16px; font-weight: bold; color: #0056b3; margin-top: 10px;
 }
-
 .analysis-box {
-  background-color: #f9f9f9; 
-border: 1px solid #ddd;
- padding: 5px; 
-margin: 30px 0; 
-border-radius: 5px; 
-font-size: 15px;
+  background-color: #f9f9f9; border: 1px solid #ddd;
+  padding: 5px; margin: 30px 0; border-radius: 5px; font-size: 15px;
 }
 .analysis-box .option {
-  margin: 6px 0; 
-border: 1px solid #ddd;
-  border-radius: 5px; 
-font-size: 15px; 
-padding: 3px;
+  margin: 2px 0; border: 1px solid #ddd;
+  border-radius: 5px; font-size: 15px; padding: 3px;
 }
-
 .feedback {
-  font-weight: bold; 
-margin-top: 10px; 
-padding: 8px;
-  border-radius: 5px;
- text-align: center; 
-font-size: 16px;
+  font-weight: bold; margin-top: 10px; padding: 8px;
+  border-radius: 5px; text-align: center; font-size: 16px;
 }
+.correct-feedback { background-color: #009999; color: white; }
+.wrong-feedback { background-color: #990000; color: white; }
+.not-attempted-feedback { background-color: #66c2ff; color: white; }
 
-.correct-feedback { 
-background-color: #009999; 
-color: white; 
-}
-
-.wrong-feedback { 
-background-color: #990000; 
-color: white; 
-}
-
-.not-attempted-feedback { 
-background-color: #66c2ff; 
-color: white; 
-}
-
+/* Media query for smaller screens (e.g., mobile) */
 @media screen and (max-width: 600px) {
-.quiz-header, .quiz-topbar {
-flex-direction: row;
-align-items: center;
-gap: 8px;
-justify-content: space-around;
-flex-wrap: wrap;
+  .quiz-header, .quiz-topbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Align to left on mobile as well */
+    gap: 8px; /* Gap between items on mobile */
+    flex-wrap: wrap;
   }
   .navigation { flex-direction: column; align-items: stretch; }
+
+  /* Adjust spacing between buttons on mobile if needed */
+  .question-number { margin-right: 10px; }
+  .startBtn { margin-right: 10px; }
 }
+
