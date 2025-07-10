@@ -21,14 +21,14 @@
 
     .question-card {
       background: #ffffff;
-      padding: 5px;
+      padding: 8px;
       border-radius: 5px;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
       margin-bottom: 20px; /* Space between question cards */
     }
 
     .question-title {
-        font-size: 14px;
+        font-size: 15px;
         font-weight: bold;
       color: #000080;
       
@@ -115,43 +115,44 @@
     }
 
     .answer-box {
-      font-size: 14px;
+      font-size: 15px;
       background-color: #e9f7ef; /* Light green for correct answer */
       border: 1px solid #00994d;
-      padding: 3px;
-      border-radius: 3px;
+      padding: 8px;
+      border-radius: 5px;
       margin-top: 15px;
+        margin-bottom: 15px
       display: none; /* Hidden by default */
     }
 
     .explanation-box {
       background-color: #f0f8ff; /* Light blue for explanation */
-      font-size: 14px;
+      font-size: 15px;
       border: 1px solid #66b3ff;
-      padding: 3px;
-      border-radius: 3px;
+      padding: 8px;
+      border-radius: 5px;
       margin-top: 10px;
+        margin-bottom: 15px;
       display: none; /* Hidden by default */
     }
 
     .answer-text {
       font-weight: bold;
-      font-size: 14px;
+      font-size: 15px;
       color: #000000; /* Dark green for answer */
-      margin-bottom: 5px;
+      margin-bottom: 15px;
     }
 
     .explanation-text {
       color: #000000;
-      line-height: 1.5;
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .results-card {
-        max-width: 100%;
+        max-width: 600px;
         margin: 20px auto;
         background: #ffffff;
-        padding: 5px;
+        padding: 8px;
         border-radius: 5px;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
@@ -161,6 +162,7 @@
     .results-card h3 {
         color: #000080;
         margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     .results-grid {
@@ -183,21 +185,24 @@
     }
 
     .results-message {
+        margin-top: 20px;
         font-size: 18px;
         font-weight: bold;
-        color: #00994d; /* Green for success message */
+        color: #00ffff; /* Green for success message */
         margin-bottom: 20px; /* Space before button */
     }
 
     .try-again-btn {
         background-color: #004466; /* Gray button */
         color: white;
-        padding: 2px 6px;
+        padding: 4px 8px;
         border-radius: 5px;
         border: none;
         cursor: pointer;
         font-weight: bold;
         font-size: 16px;
+        margin-bottom: 20px;
+        margin-bottom: 20px;
         transition: background-color 0.3s ease;
     }
 
