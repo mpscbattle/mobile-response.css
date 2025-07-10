@@ -1,96 +1,210 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-* { font-family: 'Poppins', sans-serif !important; }
-body { background-color: #f0f0f0; margin: 0; padding: 5px; }
-.quiz-box, .report-card, .analysis-card {
-  max-width: 100%; margin: 10px auto; background: #fff; padding: 8px;
-  border-radius: 5px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
-}
-.quiz-topbar {
-  display: flex;
-  justify-content: flex-start; /* Align items to the left */
-  align-items: center;
-  background: #fff; padding: 6px 8px; border-radius: 5px;
-  margin: 20px auto 10px auto; flex-wrap: wrap;
-  gap: 10px; /* Add a default gap between items */
-}
-.question-number, .timer, .startBtn {
-  font-size: 14px; font-weight: bold; padding: 4px 7px; border-radius: 5px;
-}
-.question-number {
-    background-color: #000099;
-    color: white;
-}
-.timer { background-color: #00b386; color: white; }
-.startBtn { background-color: #cc5200; color: white; cursor: pointer; }
 
-/* Question text bold and space between question and options */
-.question {
-    font-size: 17px;
-    font-weight: bold; /* Make question bold */
-    margin: 10px 0;
-}
-.options {
-    margin-top: 15px; /* Increase space between question and options */
-}
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.options .option {
-  font-size: 15px; padding: 6px; margin: 4px 0; border: 1px solid #ddd;
-  border-radius: 5px; background-color: #f9f9f9; cursor: pointer;
-  transition: background 0.3s ease;
-}
-.option.selected { background-color: #80bdff !important; }
-.option.correct { background-color: #009999; color: white; }
-.option.wrong { background-color: #990000; color: white; }
-.navigation {
-  display: flex; justify-content: space-between; margin-top: 15px;
-  flex-wrap: wrap; gap: 10px;
-}
-.btn {
-  padding: 10px 16px; font-size: 15px; border-radius: 5px;
-  border: none; cursor: pointer; font-weight: bold;
-}
-.btn-primary { background-color: #000080; color: white; margin: 15px auto; pading: 4px 8px; display: block; }
-.btn-secondary { background-color: #6c757d; color: white; }
-.btn-black { background-color: black; color: white; display: block; pading: 4px 8px;  margin: 10px auto; }
-.report-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;
-}
-.report-item {
-  background-color: #f2f2f2; border: 1px solid #ccc;
-  padding: 10px; text-align: center; font-size: 14px; border-radius: 5px;
-}
-.result-message {
-  text-align: center; font-size: 16px; font-weight: bold; color: #0056b3; margin-top: 10px;
-}
-.analysis-box {
-  background-color: #f9f9f9; border: 1px solid #ddd;
-  padding: 5px; margin: 30px 0; border-radius: 5px; font-size: 15px;
-}
-.analysis-box .option {
-  margin: 2px 0; border: 1px solid #ddd;
-  border-radius: 5px; font-size: 15px; padding: 3px;
-}
-.feedback {
-  font-weight: bold; margin-top: 10px; padding: 8px;
-  border-radius: 5px; text-align: center; font-size: 16px;
-}
-.correct-feedback { background-color: #009999; color: white; }
-.wrong-feedback { background-color: #990000; color: white; }
-.not-attempted-feedback { background-color: #66c2ff; color: white; }
+    * {
+      font-family: 'Poppins', sans-serif !important;
+      box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    }
 
-/* Media query for smaller screens (e.g., mobile) */
-@media screen and (max-width: 600px) {
-  .quiz-header, .quiz-topbar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start; /* Align to left on mobile as well */
-    gap: 8px; /* Gap between items on mobile */
-    flex-wrap: wrap;
-  }
-  .navigation { flex-direction: column; align-items: stretch; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 3px;
+    }
 
-  /* Adjust spacing between buttons on mobile if needed */
-  .question-number { margin-right: 10px; }
-  .startBtn { margin-right: 10px; }
+    .practice-container {
+        max-width: 100%; /* Max width for the entire container of questions */
+        margin: 0 auto; /* Center the container */
+        padding: 3px;
+    }
+
+    .question-card {
+      background: #ffffff;
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 20px; /* Space between question cards */
+    }
+
+    .question-title {
+        font-size: 14px;
+        font-weight: bold;
+      color: #000080;
+      
+    }
+
+    .question-text {
+      font-size: 17px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .options .option {
+      font-size: 15px;
+      padding: 10px;
+      margin: 8px 0; /* Space between options */
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .option:hover {
+        background-color: #ffcc66;
+    }
+
+    .option.selected {
+      background-color: #99ffcc; /* Light blue for selected option */
+      border-color: #99ffcc;
+    }
+
+    /* Style for the correct option when shown */
+    .option.correct {
+      background-color: #00994d !important; /* Green background for correct answer */
+      color: white !important;
+      border-color: #00994d !important;
+    }
+
+    .option.wrong {
+      background-color: #b30000 !important; /* Red background for wrong answer */
+      color: white !important;
+      border-color: #b30000 !important;
+    }
+
+    .view-answer-btn {
+      background-color: #009999; /* Blue button */
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      display: block; /* Takes full width and centers if margin auto is used */
+      width: fit-content; /* Adjusts width to content */
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .view-answer-btn:hover {
+        background-color: #009973;
+    }
+    
+    .submit-test-btn {
+        background-color: #000080; /* Green button for submit */
+        color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 20px auto;
+        display: block;
+        width: fit-content;
+        transition: background-color 0.3s ease;
+    }
+
+    .submit-test-btn:hover {
+        background-color: #218838;
+    }
+
+    .answer-box {
+      font-size: 14px;
+      background-color: #e9f7ef; /* Light green for correct answer */
+      border: 1px solid #00994d;
+      padding: 3px;
+      border-radius: 3px;
+      margin-top: 15px;
+      display: none; /* Hidden by default */
+    }
+
+    .explanation-box {
+      background-color: #f0f8ff; /* Light blue for explanation */
+      font-size: 14px;
+      border: 1px solid #66b3ff;
+      padding: 3px;
+      border-radius: 3px;
+      margin-top: 10px;
+      display: none; /* Hidden by default */
+    }
+
+    .answer-text {
+      font-weight: bold;
+      font-size: 14px;
+      color: #000000; /* Dark green for answer */
+      margin-bottom: 5px;
+    }
+
+    .explanation-text {
+      color: #000000;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .results-card {
+        max-width: 100%;
+        margin: 20px auto;
+        background: #ffffff;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        display: none; /* Hidden by default */
+    }
+
+    .results-card h3 {
+        color: #000080;
+        margin-bottom: 20px;
+    }
+
+    .results-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .results-item {
+        background-color: #f2f2f2;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #555;
+    }
+    .results-item span {
+        color: #000080; /* Darker color for the actual number */
+    }
+
+    .results-message {
+        font-size: 18px;
+        font-weight: bold;
+        color: #00994d; /* Green for success message */
+        margin-bottom: 20px; /* Space before button */
+    }
+
+    .try-again-btn {
+        background-color: #004466; /* Gray button */
+        color: white;
+        padding: 2px 6px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .try-again-btn:hover {
+        background-color: #5a6268;
+    }
 }
-
+    
+       
+  
