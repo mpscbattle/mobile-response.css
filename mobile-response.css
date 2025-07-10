@@ -10,18 +10,18 @@
       font-family: 'Poppins', sans-serif;
       background-color: #f0f0f0;
       margin: 0;
-      padding: 3px;
+      padding: 5px;
     }
 
     .practice-container {
         max-width: 100%; /* Max width for the entire container of questions */
         margin: 0 auto; /* Center the container */
-        padding: 3px;
+        padding: 5px;
     }
 
     .question-card {
       background: #ffffff;
-      padding: 8px;
+      padding: 10px;
       border-radius: 5px;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
       margin-bottom: 20px; /* Space between question cards */
@@ -118,7 +118,7 @@
       font-size: 15px;
       background-color: #e9f7ef; /* Light green for correct answer */
       border: 1px solid #00994d;
-      padding: 8px;
+      padding: 10px;
       border-radius: 5px;
       margin-top: 15px;
         margin-bottom: 15px
@@ -129,9 +129,9 @@
       background-color: #f0f8ff; /* Light blue for explanation */
       font-size: 15px;
       border: 1px solid #66b3ff;
-      padding: 8px;
+      padding: 10px;
       border-radius: 5px;
-      margin-top: 10px;
+      margin-top: 15px;
         margin-bottom: 15px;
       display: none; /* Hidden by default */
     }
@@ -149,10 +149,10 @@
     }
 
     .results-card {
-        max-width: 600px;
+        max-width: 800px;
         margin: 20px auto;
         background: #ffffff;
-        padding: 8px;
+        padding: 10px;
         border-radius: 5px;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
@@ -178,7 +178,7 @@
         border-radius: 5px;
         font-size: 16px;
         font-weight: bold;
-        color: #555;
+        color: #000;
     }
     .results-item span {
         color: #000080; /* Darker color for the actual number */
@@ -201,7 +201,7 @@
         cursor: pointer;
         font-weight: bold;
         font-size: 16px;
-        margin-bottom: 20px;
+        margin-top: 20px;
         margin-bottom: 20px;
         transition: background-color 0.3s ease;
     }
