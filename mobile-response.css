@@ -1,216 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-    * {
-      font-family: 'Poppins', sans-serif !important;
-      box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 5px;
-    }
-
-    .practice-container {
-        max-width: 100%; /* Max width for the entire container of questions */
-        margin: 0 auto; /* Center the container */
-        padding: 8px;
-    }
-
-    .question-card {
-      background: #ffffff;
-      padding: 5px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
-      margin-bottom: 20px; /* Space between question cards */
-    }
-
-    .question-title {
-        font-size: 14px;
-        font-weight: bold;
-      color: #000080;
-      
-    }
-
-    .question-text {
-      font-size: 17px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    .options .option {
-      font-size: 15px;
-      padding: 10px;
-      margin: 8px 0; /* Space between options */
-      border: 1px solid #cccccc;
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .option:hover {
-        background-color: #ffcc66;
-    }
-
-    .option.selected {
-      background-color: #99ffcc; /* Light blue for selected option */
-      border-color: #99ffcc;
-    }
-
-    /* Style for the correct option when shown */
-    .option.correct {
-      background-color: #00994d !important; /* Green background for correct answer */
-      color: white !important;
-      border-color: #00994d !important;
-    }
-
-    .option.wrong {
-      background-color: #b30000 !important; /* Red background for wrong answer */
-      color: white !important;
-      border-color: #b30000 !important;
-    }
-
-    .view-answer-btn {
-      background-color: #009999; /* Blue button */
-      color: white;
-      padding: 8px 15px;
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 14px;
-      margin-top: 15px;
-      margin-bottom: 10px;
-      display: block; /* Takes full width and centers if margin auto is used */
-      width: fit-content; /* Adjusts width to content */
-      margin-left: auto;
-      margin-right: auto;
-      transition: background-color 0.3s ease;
-    }
-
-    .view-answer-btn:hover {
-        background-color: #009973;
-    }
-    
-    .submit-test-btn {
-        background-color: #000080; /* Green button for submit */
-        color: white;
-        padding: 8px 15px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 16px;
-        margin: 20px auto;
-margin-top: 15px;
-margin-bottom: 15px;
-        display: block;
-        width: fit-content;
-        transition: background-color 0.3s ease;
-    }
-
-    .submit-test-btn:hover {
-        background-color: #218838;
-    }
-
-    .answer-box {
-      font-size: 14px;
-      background-color: #e9f7ef; /* Light green for correct answer */
-      border: 1px solid #00994d;
-      padding: 3px;
-      border-radius: 3px;
-      margin-top: 15px;
-      display: none; /* Hidden by default */
-    }
-
-    .explanation-box {
-      background-color: #f0f8ff; /* Light blue for explanation */
-      font-size: 14px;
-      border: 1px solid #66b3ff;
-      padding: 3px;
-      border-radius: 3px;
-      margin-top: 15px;
-      display: none; /* Hidden by default */
-    }
-
-    .answer-text {
-      font-weight: bold;
-      font-size: 14px;
-      color: #000000; /* Dark green for answer */
-      margin-bottom: 10px;
-    }
-
-    .explanation-text {
-      color: #000000;
-      line-height: 1.5;
-      font-size: 15px;
-margin-bottom: 15px;
-    }
-
-    .results-card {
-        max-width: 700px;
-        margin: 20px auto;
-        background: #ffffff;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
-        text-align: center;
-        display: none; /* Hidden by default */
-    }
-
-    .results-card h3 {
-        color: #000080;
-        margin-bottom: 20px;
-    }
-
-    .results-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
-
-    .results-item {
-        background-color: #f2f2f2;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #555;
-    }
-    .results-item span {
-        color: #000080; /* Darker color for the actual number */
-    }
-
-    .results-message {
-        font-size: 18px;
-        font-weight: bold;
-        color: #00994d; /* Green for success message */
-        margin-bottom: 20px; /* Space before button */
-margin-top: 20px;
-    }
-
-    .try-again-btn {
-        background-color: #004466; /* Gray button */
-        color: white;
-        padding: 4px 9px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 16px;
-margin-top: 20px;
-margin-bottom: 20px;
-        transition: background-color 0.3s ease;
-    }
-
-    .try-again-btn:hover {
-        background-color: #5a6268;
-    }
+* {
+  font-family: 'Poppins', sans-serif !important;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
-    
-       
-  
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 10px;
+}
+
+.practice-header {
+    background-color: #f2f2f2;
+    padding: 5px 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    color: #333;
+}
+
+.practice-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.practice-container {
+    max-width: 600px; /* Max width for the entire container of questions */
+    margin: 0 auto; /* Center the container */
+    padding: 5px;
+}
+
+.question-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px; /* Space between question cards */
+}
+
+.question-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.question-number {
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  background-color: #000080; /* Blue background for number */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Slightly larger circle for header */
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin-right: 10px; /* Space between number and "GK Question" text */
+}
+
+.question-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.question-text {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.options .option {
+  font-size: 15px;
+  padding: 10px;
+  margin: 8px 0; /* Space between options */
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
+
+.option.selected {
+  background-color: #e6f7ff; /* Light blue for selected option */
+  border-color: #80bdff;
+}
+
+/* Style for the correct option when shown */
+.option.correct {
+  background-color: #00994d !important; /* Green background for correct answer */
+  color: white !important;
+  border-color: #00994d !important;
+}
+
+.option.wrong {
+  background-color: #b30000 !important; /* Red background for wrong answer */
+  color: white !important;
+  border-color: #b30000 !important;
+}
+
+.view-answer-btn {
+  background-color: #007bff; /* Blue button */
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 15px;
+  display: block; /* Takes full width and centers if margin auto is used */
+  width: fit-content; /* Adjusts width to content */
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s ease;
+}
+
+.view-answer-btn:hover {
+    background-color: #0056b3;
+}
+
+.submit-test-btn {
+    background-color: #28a745; /* Green button for submit */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.submit-test-btn:hover {
+    background-color: #218838;
+}
+
+.answer-box {
+  background-color: #e9f7ef; /* Light green for correct answer */
+  border: 1px solid #00994d;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  display: none; /* Hidden by default */
+}
+
+.explanation-box {
+  background-color: #f0f8ff; /* Light blue for explanation */
+  border: 1px solid #66b3ff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: none; /* Hidden by default */
+}
+
+.answer-text {
+  font-weight: bold;
+  color: #00994d; /* Dark green for answer */
+  margin-bottom: 5px;
+}
+
+.explanation-text {
+  color: #333;
+  line-height: 1.5;
+}
+
+.results-card {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+.results-card h3 {
+    color: #000080;
+    margin-bottom: 20px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.results-item {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+.results-item span {
+    color: #000080; /* Darker color for the actual number */
+}
+
+.results-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00994d; /* Green for success message */
+    margin-bottom: 20px; /* Space before button */
+}
+
+.try-again-btn {
+    background-color: #6c757d; /* Gray button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.try-again-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+    .practice-container, .question-card {
+        padding: 10px;
+    }
+    .question-number {
+        width: 35px;
+        height: 35px;
+        font-size: 13px;
+    }
+    .question-title {
+        font-size: 15px;
+    }
+    .question-text {
+        font-size: 16px;
+    }
+    .options .option {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .view-answer-btn, .submit-test-btn, .try-again-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    .results-grid {
+        grid-template-columns: 1fr; /* Stack on small screens */
+    }
+    }
