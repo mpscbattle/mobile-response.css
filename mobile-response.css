@@ -117,12 +117,12 @@ body {
 .view-answer-btn {
   background-color: #008080; 
   color: white;
-  padding: 8px 14px; /* बटन की पैडिंग कम की */
+  padding: 4px 9px; /* बटन की पैडिंग कम की */
   border-radius: 5px;
   border: none;
   cursor: pointer;
   font-weight: bold;
-  font-size: 14px; /* बटन का फ़ॉन्ट साइज़ थोड़ा कम किया */
+  font-size: 15px; /* बटन का फ़ॉन्ट साइज़ थोड़ा कम किया */
   display: block; 
   width: fit-content; 
   margin-left: auto;
@@ -139,12 +139,12 @@ body {
 .submit-test-btn {
     background-color: #cc5200; 
     color: white;
-    padding: 10px 17px; /* सबमिट बटन की पैडिंग कम की */
+    padding: 4px 9px; /* सबमिट बटन की पैडिंग कम की */
     border-radius: 5px;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px; /* सबमिट बटन का फ़ॉन्ट साइज़ कम किया */
+    font-size: 15px; /* सबमिट बटन का फ़ॉन्ट साइज़ कम किया */
     margin: 15px auto; /* सबमिट बटन के ऊपर/नीचे मार्जिन कम किया */
     display: block;
     width: fit-content;
@@ -158,9 +158,9 @@ body {
 .answer-box {
   background-color: #f2f2f2; 
   border: none;
-  padding: 10px; /* उत्तर बॉक्स की पैडिंग कम की */
+  padding: 20px; /* उत्तर बॉक्स की पैडिंग कम की */
   border-radius: 0px;
-  margin-top: 20px; /* उत्तर बॉक्स के ऊपर मार्जिन कम किया */
+  margin-top: 10px; /* उत्तर बॉक्स के ऊपर मार्जिन कम किया */
  margin-bottom: 10px; 
   display: none; 
 }
@@ -168,61 +168,62 @@ body {
 .explanation-box {
   background-color: #f2f2f2; 
   border: none;
-  padding: 10px; /* स्पष्टीकरण बॉक्स की पैडिंग कम की */
+  padding: 20px; /* स्पष्टीकरण बॉक्स की पैडिंग कम की */
   border-radius: 0px;
-  margin-top: 10px; /* स्पष्टीकरण बॉक्स के ऊपर मार्जिन कम किया */
- margin-top: 20px; 
+  margin-top: 20px; /* स्पष्टीकरण बॉक्स के ऊपर मार्जिन कम किया */
+ margin-bottom: 20px; 
   display: none; 
 }
 
 .answer-text {
   font-weight: bold;
   color: #00994d; 
-  margin-bottom: 4px; /* उत्तर टेक्स्ट के नीचे मार्जिन कम किया */
-  font-size: 14px; /* उत्तर टेक्स्ट का फ़ॉन्ट साइज़ थोड़ा कम किया */
+  margin-top: 10px;
+  margin-bottom: 10px; /* उत्तर टेक्स्ट के नीचे मार्जिन कम किया */
+  font-size: 15px; /* उत्तर टेक्स्ट का फ़ॉन्ट साइज़ थोड़ा कम किया */
 }
 
 .explanation-text {
   color: #000;
   line-height: 1.4; /* लाइन-हाइट थोड़ी कम की ताकि टेक्स्ट घना लगे */
-  font-size: 14px; /* स्पष्टीकरण टेक्स्ट का फ़ॉन्ट साइज़ थोड़ा कम किया */
+  font-size: 15px; /* स्पष्टीकरण टेक्स्ट का फ़ॉन्ट साइज़ थोड़ा कम किया */
+margin-top: 20px; /* स्पष्टीकरण बॉक्स के ऊपर मार्जिन कम किया */
+ margin-bottom: 20px; 
 }
 
 .results-card {
-    max-width: 100%; 
-    width: 100%;
-    margin: 15px auto; /* परिणाम कार्ड का मार्जिन कम किया */
-    background: #f2f2f2;
-    padding: 15px; /* परिणाम कार्ड की पैडिंग कम की */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+    max-width: 600px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
-    display: none; 
+    display: none; /* Hidden by default */
 }
 
 .results-card h3 {
-    color: #990000;
-    margin-bottom: 15px; /* h3 के नीचे मार्जिन कम किया */
-    font-size: 18px; /* h3 का फ़ॉन्ट साइज़ थोड़ा कम किया */
+    color: #000080;
+    margin-bottom: 20px;
 }
 
 .results-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px; /* ग्रिड के बीच का गैप कम किया */
-    margin-bottom: 15px; /* ग्रिड के नीचे मार्जिन कम किया */
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .results-item {
     background-color: #f2f2f2;
-    padding: 8px; /* परिणाम आइटम की पैडिंग कम की */
+    padding: 10px;
     border-radius: 5px;
-    font-size: 14px; /* परिणाम आइटम का फ़ॉन्ट साइज़ कम किया */
+    font-size: 16px;
     font-weight: bold;
-    color: #000;
+    color: #555;
 }
 .results-item span {
-    color: #000080; 
+    color: #000080; /* Darker color for the actual number */
 }
 
 .results-message {
@@ -236,12 +237,12 @@ body {
 .try-again-btn {
     background-color: #009999; 
     color: white;
-    padding: 10px 17px; /* ट्राई अगेन बटन की पैडिंग कम की */
+    padding: 4px 9px; /* ट्राई अगेन बटन की पैडिंग कम की */
     border-radius: 5px;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px; /* ट्राई अगेन बटन का फ़ॉन्ट साइज़ कम किया */
+    font-size: 16px; /* ट्राई अगेन बटन का फ़ॉन्ट साइज़ कम किया */
     transition: background-color 0.3s ease;
 }
 
