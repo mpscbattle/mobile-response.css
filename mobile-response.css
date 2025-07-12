@@ -1,21 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* यूनिवर्सल बॉक्स-साइजिंग, यह सुनिश्चित करता है कि पैडिंग और बॉर्डर एलिमेंट की चौड़ाई में शामिल हों */
 * {
   font-family: 'Poppins', sans-serif !important;
-  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  box-sizing: border-box; 
 }
 
+/* बॉडी पर कोई डिफॉल्ट मार्जिन/पैडिंग नहीं */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f0f0f0;
   margin: 0;
-  padding: 10px;
+  padding: 0; 
+  /* overflow-x: hidden; */ /* हॉरिजॉन्टल स्क्रॉलिंग को रोकें यदि कोई अनपेक्षित एलिमेंट बाहर निकल रहा हो */
 }
 
+/* प्रैक्टिस हेडर */
 .practice-header {
     background-color: #f2f2f2;
-    padding: 5px 8px;
-    margin-bottom: 10px;
+    padding: 5px 8px; /* पैडिंग को थोड़ा कम रखा */
+    margin-bottom: 8px; /* हेडर के नीचे मार्जिन थोड़ा कम किया */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
@@ -24,61 +28,64 @@ body {
 
 .practice-header h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px; /* हेडर के फ़ॉन्ट साइज़ को थोड़ा कम किया */
 }
 
+/* मुख्य कंटेनर जो सभी प्रश्नों को रखता है */
 .practice-container {
-    max-width: 600px; /* Max width for the entire container of questions */
-    margin: 0 auto; /* Center the container */
-    padding: 5px;
+    max-width: 100%; /* हमेशा 100% चौड़ाई का उपयोग करें */
+    width: 100%; 
+    margin: 0 auto; /* क्षैतिज रूप से केंद्र में */
+    padding: 5px; /* कंटेनर के अंदर और स्क्रीन के किनारों से पैडिंग कम की */
 }
 
+/* प्रत्येक प्रश्न कार्ड */
 .question-card {
   background: #ffffff;
-  padding: 15px;
+  padding: 10px; /* प्रश्न कार्ड के अंदर पैडिंग और कम की */
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px; /* Space between question cards */
+  margin-bottom: 15px; /* कार्ड के बीच की जगह थोड़ी कम की */
 }
 
 .question-header {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* प्रश्न हेडर के नीचे मार्जिन कम किया */
 }
 
 .question-number {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 13px; /* प्रश्न संख्या का फ़ॉन्ट साइज़ थोड़ा कम किया */
   color: white;
-  background-color: #000080; /* Blue background for number */
+  background-color: #000080;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; /* Slightly larger circle for header */
-  height: 40px;
+  width: 35px; /* प्रश्न संख्या के सर्कल का साइज़ थोड़ा कम किया */
+  height: 35px;
   border-radius: 50%;
   box-sizing: border-box;
   flex-shrink: 0;
-  margin-right: 10px; /* Space between number and "GK Question" text */
+  margin-right: 8px; /* प्रश्न संख्या और टेक्स्ट के बीच की जगह कम की */
 }
 
 .question-title {
-    font-size: 16px;
+    font-size: 15px; /* प्रश्न शीर्षक का फ़ॉन्ट साइज़ थोड़ा कम किया */
     font-weight: bold;
     color: #333;
 }
 
 .question-text {
-  font-size: 17px;
+  font-size: 16px; /* प्रश्न टेक्स्ट का फ़ॉन्ट साइज़ थोड़ा कम किया */
   font-weight: bold;
-  margin: 10px 0;
+  margin: 8px 0; /* प्रश्न टेक्स्ट के ऊपर/नीचे मार्जिन कम किया */
 }
 
 .options .option {
-  font-size: 15px;
-  padding: 10px;
-  margin: 8px 0; /* Space between options */
+  font-size: 14px; /* ऑप्शन का फ़ॉन्ट साइज़ थोड़ा कम किया */
+  padding: 8px; /* ऑप्शन के अंदर पैडिंग कम की */
+  margin: 6px 0; /* ऑप्शन के बीच की जगह कम की */
   border: 1px solid #cccccc;
   border-radius: 5px;
   background-color: #f9f9f9;
@@ -91,35 +98,34 @@ body {
 }
 
 .option.selected {
-  background-color: #e6f7ff; /* Light blue for selected option */
+  background-color: #e6f7ff; 
   border-color: #80bdff;
 }
 
-/* Style for the correct option when shown */
 .option.correct {
-  background-color: #00994d !important; /* Green background for correct answer */
+  background-color: #00994d !important; 
   color: white !important;
   border-color: #00994d !important;
 }
 
 .option.wrong {
-  background-color: #b30000 !important; /* Red background for wrong answer */
+  background-color: #b30000 !important; 
   color: white !important;
   border-color: #b30000 !important;
 }
 
 .view-answer-btn {
-  background-color: #007bff; /* Blue button */
+  background-color: #007bff; 
   color: white;
-  padding: 8px 15px;
+  padding: 6px 12px; /* बटन की पैडिंग कम की */
   border-radius: 5px;
   border: none;
   cursor: pointer;
   font-weight: bold;
-  font-size: 14px;
-  margin-top: 15px;
-  display: block; /* Takes full width and centers if margin auto is used */
-  width: fit-content; /* Adjusts width to content */
+  font-size: 13px; /* बटन का फ़ॉन्ट साइज़ थोड़ा कम किया */
+  margin-top: 10px; /* बटन के ऊपर मार्जिन कम किया */
+  display: block; 
+  width: fit-content; 
   margin-left: auto;
   margin-right: auto;
   transition: background-color 0.3s ease;
@@ -130,15 +136,15 @@ body {
 }
 
 .submit-test-btn {
-    background-color: #28a745; /* Green button for submit */
+    background-color: #28a745; 
     color: white;
-    padding: 10px 20px;
+    padding: 8px 15px; /* सबमिट बटन की पैडिंग कम की */
     border-radius: 5px;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
-    margin: 20px auto;
+    font-size: 14px; /* सबमिट बटन का फ़ॉन्ट साइज़ कम किया */
+    margin: 15px auto; /* सबमिट बटन के ऊपर/नीचे मार्जिन कम किया */
     display: block;
     width: fit-content;
     transition: background-color 0.3s ease;
@@ -149,85 +155,89 @@ body {
 }
 
 .answer-box {
-  background-color: #e9f7ef; /* Light green for correct answer */
+  background-color: #e9f7ef; 
   border: 1px solid #00994d;
-  padding: 10px;
+  padding: 8px; /* उत्तर बॉक्स की पैडिंग कम की */
   border-radius: 5px;
-  margin-top: 15px;
-  display: none; /* Hidden by default */
+  margin-top: 10px; /* उत्तर बॉक्स के ऊपर मार्जिन कम किया */
+  display: none; 
 }
 
 .explanation-box {
-  background-color: #f0f8ff; /* Light blue for explanation */
+  background-color: #f0f8ff; 
   border: 1px solid #66b3ff;
-  padding: 10px;
+  padding: 8px; /* स्पष्टीकरण बॉक्स की पैडिंग कम की */
   border-radius: 5px;
-  margin-top: 10px;
-  display: none; /* Hidden by default */
+  margin-top: 8px; /* स्पष्टीकरण बॉक्स के ऊपर मार्जिन कम किया */
+  display: none; 
 }
 
 .answer-text {
   font-weight: bold;
-  color: #00994d; /* Dark green for answer */
-  margin-bottom: 5px;
+  color: #00994d; 
+  margin-bottom: 3px; /* उत्तर टेक्स्ट के नीचे मार्जिन कम किया */
+  font-size: 14px; /* उत्तर टेक्स्ट का फ़ॉन्ट साइज़ थोड़ा कम किया */
 }
 
 .explanation-text {
   color: #333;
-  line-height: 1.5;
+  line-height: 1.4; /* लाइन-हाइट थोड़ी कम की ताकि टेक्स्ट घना लगे */
+  font-size: 13px; /* स्पष्टीकरण टेक्स्ट का फ़ॉन्ट साइज़ थोड़ा कम किया */
 }
 
 .results-card {
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 100%; 
+    width: 100%;
+    margin: 15px auto; /* परिणाम कार्ड का मार्जिन कम किया */
     background: #ffffff;
-    padding: 20px;
+    padding: 15px; /* परिणाम कार्ड की पैडिंग कम की */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
 .results-card h3 {
     color: #000080;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* h3 के नीचे मार्जिन कम किया */
+    font-size: 18px; /* h3 का फ़ॉन्ट साइज़ थोड़ा कम किया */
 }
 
 .results-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 8px; /* ग्रिड के बीच का गैप कम किया */
+    margin-bottom: 15px; /* ग्रिड के नीचे मार्जिन कम किया */
 }
 
 .results-item {
     background-color: #f2f2f2;
-    padding: 10px;
+    padding: 8px; /* परिणाम आइटम की पैडिंग कम की */
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px; /* परिणाम आइटम का फ़ॉन्ट साइज़ कम किया */
     font-weight: bold;
     color: #555;
 }
 .results-item span {
-    color: #000080; /* Darker color for the actual number */
+    color: #000080; 
 }
 
 .results-message {
-    font-size: 18px;
+    font-size: 16px; /* परिणाम मैसेज का फ़ॉन्ट साइज़ कम किया */
     font-weight: bold;
-    color: #00994d; /* Green for success message */
-    margin-bottom: 20px; /* Space before button */
+    color: #00994d; 
+    margin-bottom: 15px; /* मैसेज के नीचे मार्जिन कम किया */
 }
 
 .try-again-btn {
-    background-color: #6c757d; /* Gray button */
+    background-color: #6c757d; 
     color: white;
-    padding: 10px 20px;
+    padding: 8px 15px; /* ट्राई अगेन बटन की पैडिंग कम की */
     border-radius: 5px;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px; /* ट्राई अगेन बटन का फ़ॉन्ट साइज़ कम किया */
     transition: background-color 0.3s ease;
 }
 
@@ -235,34 +245,55 @@ body {
     background-color: #5a6268;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
     body {
-        padding: 5px;
+        padding: 0; /* छोटी स्क्रीन पर body की पैडिंग 0 */
     }
-    .practice-container, .question-card {
-        padding: 10px;
+    .practice-container {
+        padding: 3px; /* कंटेनर की पैडिंग को और कम किया */
+        margin: 0 auto; 
+    }
+    .question-card {
+        padding: 8px; /* question-card की पैडिंग को और कम किया */
+        margin-bottom: 10px; /* कार्ड के बीच का मार्जिन कम किया */
     }
     .question-number {
-        width: 35px;
-        height: 35px;
-        font-size: 13px;
+        width: 30px; /* छोटे स्क्रीन पर सर्कल को थोड़ा और छोटा किया */
+        height: 30px;
+        font-size: 12px;
+        margin-right: 5px;
     }
     .question-title {
-        font-size: 15px;
-    }
-    .question-text {
-        font-size: 16px;
-    }
-    .options .option {
-        padding: 8px;
         font-size: 14px;
     }
+    .question-text {
+        font-size: 15px;
+    }
+    .options .option {
+        padding: 6px; /* ऑप्शंस की पैडिंग को और कम किया */
+        font-size: 13px;
+        margin: 5px 0;
+    }
     .view-answer-btn, .submit-test-btn, .try-again-btn {
-        padding: 6px 12px;
+        padding: 5px 10px; /* बटनों की पैडिंग को और कम किया */
+        font-size: 12px;
+    }
+    .answer-box, .explanation-box {
+        padding: 6px; /* उत्तर/स्पष्टीकरण बॉक्स की पैडिंग कम की */
+        margin-top: 8px;
+    }
+    .answer-text, .explanation-text {
+        font-size: 12px;
+    }
+    .results-card {
+        padding: 10px; /* परिणाम कार्ड की पैडिंग कम की */
+    }
+    .results-item {
+        padding: 6px; /* परिणाम आइटम की पैडिंग कम की */
         font-size: 13px;
     }
-    .results-grid {
-        grid-template-columns: 1fr; /* Stack on small screens */
+    .results-message {
+        font-size: 15px;
     }
-    }
+}
