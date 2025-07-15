@@ -196,14 +196,14 @@ margin-top: 10px; /* स्पष्टीकरण बॉक्स के ऊ�
     margin: 20px auto;
     background: #ffffff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     display: none; /* Hidden by default */
 }
 
-.results-card h3 {
-    color: #339933;
+.results-card h2 {
+    color: #0000cc;
     margin-bottom: 20px;
 }
 
@@ -216,18 +216,18 @@ margin-top: 10px; /* स्पष्टीकरण बॉक्स के ऊ�
 
 .results-item {
     background-color: #f2f2f2;
+  border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
+    font-size: 14px;
+    color: #262626;
 }
 .results-item span {
     color: #000080; /* Darker color for the actual number */
 }
 
 .results-message {
-    font-size: 16px; /* परिणाम मैसेज का फ़ॉन्ट साइज़ कम किया */
+    font-size: 17px; /* परिणाम मैसेज का फ़ॉन्ट साइज़ कम किया */
     font-weight: bold;
     color: #00994d; 
     margin-bottom: 20px; /* मैसेज के नीचे मार्जिन कम किया */
