@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* यूनिवर्सल बॉक्स-साइजिंग, यह सुनिश्चित करता है कि पैडिंग और बॉर्डर एलिमेंट की चौड़ाई में शामिल हों */
 * {
-  font-family: 'Poppins', sans-serif !important;
+  
   box-sizing: border-box; 
 }
 
 /* बॉडी पर कोई डिफॉल्ट मार्जिन/पैडिंग नहीं */
 body {
-  font-family: 'Poppins', sans-serif;
+  
   background-color: #f0f0f0;
   margin: 0;
   padding: 0; 
